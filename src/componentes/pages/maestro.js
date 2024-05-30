@@ -50,7 +50,7 @@ export default class Maestro extends React.Component{
         return(
             <div>
                  <Hola
-                    username = "Johitan"
+                    username = "ar"
                 />
                 <Iterador
                     chao={this.state.data}
