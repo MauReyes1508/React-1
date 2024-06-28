@@ -9,7 +9,7 @@ const Dibujar = ({formu,onChange,onSubmit})=> (
                 </div>
                 <div className="formContainer">
                     <Formulario
-                        onSubmit={onSubmit}
+                        onSubmit={onSubmit} 
                         onChange={onChange}
                         formu={formu}
                     />

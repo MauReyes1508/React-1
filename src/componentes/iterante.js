@@ -1,19 +1,23 @@
 import React from "react";
 import Card from "./Card";
 
-const Iterador = ({chao})=>(
-    <React.Fragment>
+const Iterador = ({ chao }) => (
+    <div className="iteradorContainer">
         {
-            chao.map((chao)=>{
-                return(
+            Array.isArray(chao) && chao.length > 0 ? (
+                chao.map((chaoItem) => (
                     <Card
-                        key={chao.id}
-                        {...chao}
+                        key={chaoItem.id}
+                        {...chaoItem}
                     />
-                )
-            })
+                ))
+            ) : (
+                <p>No hay datos disponibles</p>
+            )
         }
-    </React.Fragment>
-)
+    </div>
+);
 
-export default Iterador
+export default Iterador;
+
+

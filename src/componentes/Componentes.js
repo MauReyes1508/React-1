@@ -1,18 +1,16 @@
 import React from "react";
-import Hola from "./saludo"
-import Iterador from "./iterante"
-import Boton from "./boton"
+import "./CSS/Componentes.css";
+import Hola from "./saludo";
+import Iterador from "./iterante";
+import Boton from "./boton";
 
-const Componentes = ({data})=>(
-    <React.Fragment>
-                 <Hola
-                    username = "Rauw"
-                />
-                <Iterador
-                    chao={data}
-                />
-                <Boton/>
-     </React.Fragment>
-)
+const Componentes = ({ data = [] }) => (
+    <div className="componentesContainer">
+        <Hola username="Raúl & Jorge" />
+        <Iterador chao={data} />
+        <Boton />
+    </div>
+);
 
-export default Componentes
+export default Componentes;
+
