@@ -1,34 +1,21 @@
-body{
-    background-color: rgb(255, 255, 255);
+
+.cardContainer {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contenido{
-    width: 300px;
-    height: auto;
-    box-shadow: 1px 1px 7px rgb(0, 0, 0);
+.title {
+    color: #333;
 }
 
-.back{
-    background-color: black;
-    border-radius: 50px;
+.description {
+    color: #666;
 }
 
-.font{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-.logo{
-    height: 200px;
-    width: 200px;
-    margin:50px;
-    margin-left: 16%;
-    border-radius: 50%;
-    box-shadow: 2px 2px 7px rgb(255, 255, 255);
-}
-
-.jas{
-    color: rgb(0, 0, 0);
+.image {
+    max-width: 50%;
+    max-height: 50%;
+    padding: 20px;
 }

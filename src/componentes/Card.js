@@ -1,42 +1,26 @@
 import React from "react";
-/* import img from "../componentes/IMG/huron.jpg"; */
-import "./CSS/stilo.css";
+import styles from "./CSS/stilo.css";
+import Imagen from "./IMG/entrar.jpg" 
 
-
-class Card extends React.Component{
-    /* constructor(props){
-        super(props)
-        this.state = {
-            magine: 'https://cdn.pixabay.com/photo/2020/11/15/18/31/cat-5746771_1280.png'
-        }
-    }
-
-    componentDidMount(){
-        setTimeout(()=>{
-            this.setState({
-                magine: img
-            })
-        },3000)
-    } */
-    render(){
- 
-        const {nombre,descip,img,color} = this.props;
-
-        return(<div className="todo">
-            
-            <div className="contenido" style={{background:`${color}`}}>
-                <div className="font">
-                    <h1>Hola {nombre}</h1>
-                    <p>{descip}</p>
-                </div>
-                <div>
-                    <img src={img} className="logo" alt=""/>
+const Card = ({ nombre, descripcion, img, leftColor, rightColor })=>(
+    <div>
+                <div className={styles.cardContainer} style={{ backgroundImage: `url(), linear-gradient(to right, ${leftColor || '#94a3b8'}, ${rightColor || '#1e293b'})` }}>
+                    <h1 className={styles.title}>Hola {nombre}</h1>
+                    <p className={styles.description}>{descripcion}</p>
+                    <img src={img || Imagen} alt="" className={styles.image} />
                 </div>
             </div>
+)
 
-        </div>) 
+
+/* class Card extends React.Component {
+    render() {
+        const { nombre, descripcion, img, leftColor, rightColor } = this.props;
+
+        return (
+            
+        );
     }
+} */
 
-}
-
-export default Card
+export default Card;
